@@ -1,0 +1,166 @@
+:root{
+ background-color: #e0e0e0;
+}
+
+div{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  
+  display: inline-block;
+}
+
+.scale0{
+  z-index: 100;
+  animation-delay: 0.8s;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+
+}
+
+.scale1{
+  z-index: 99;
+  animation-delay: 0.6s;
+  width: 200px;
+  height: 200px;
+  margin-left: -100px;
+  margin-top: -100px;
+ 
+}
+
+.scale2{
+  z-index: 98;
+  animation-delay: 0.4s;
+  width: 300px;
+  height: 300px;
+  margin-left: -150px;
+  margin-top: -150px;
+}
+
+.scale3{
+  z-index: 97;
+  animation-delay: 0.2s;
+  width: 400px;
+  height: 400px;
+  margin-left: -200px;
+  margin-top: -200px;
+}
+
+.scale4{
+  z-index: 96;
+  animation-delay: 0.0s;
+  width: 500px;
+  height: 500px;
+  margin-left: -250px;
+  margin-top: -250px;
+}
+
+
+:root {
+  
+  --box-shadow: 0px 0px 10px #ccc;
+}
+
+
+.box2{
+border-radius: 30px;
+background: #e0e0e0;
+box-shadow: var(--zero); 
+  animation-name: anim;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+ 
+}
+/* ortada beyaz kare */
+:root {
+  position: relative;
+  --zero: inset 0px 0px 0px #bbb,
+                   inset 0px 0px 0px #fff,
+                   0px 0px 0px #bbb,
+                   0px 0px 0px #fff;
+  --a: inset 10px 10px 30px #bebebe,
+                   inset -10px -10px 30px #fff,
+                   0px 0px 0px #bbb,
+                   0px 0px 0px #fff;  
+  --b: inset 0px 0px 0px #bebebe,
+                   inset 0px 0px 0px #fff,
+                   10px 10px 10px #bbb,
+                   -10px -10px 30px #fff;
+}
+
+@keyframes anim {
+  0%{
+    box-shadow: var(--zero);    
+  }
+  20%{
+    box-shadow: var(--b);   
+  }
+  40%, 50%{
+       box-shadow: var(--zero);  
+  }
+  70%{
+    box-shadow: var(--a);   
+  }
+  90%, 100%{
+       box-shadow: var(--zero);  
+  }  
+  
+}
+
+
+/*las vegas orta pencere*/
+.tablo1{
+  left: -70px;
+  right: 0px;
+  top:41%; 
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  margin: 0 auto;
+  
+  display: inline-block;
+  rotate:45deg;
+  
+  
+}
+.box {
+ /* display: ;*/
+  flex-direction: column;
+  justify-content:center;
+  border-image-source: image-set();
+  position: relative;
+  top: 0%;
+  font-size:30px;
+  width: 20px;
+  height: 20px;
+	padding: 5px;
+	border-radius: 0.75rem;
+	background: #e0e0e0;
+  	color: #c1c0b4;
+	font-family: Graphik, sans-serif;
+	font-size: 12px;
+  box-shadow: 0 4px 8px 0 rgba(255, 253, 253, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 2px;
+  transition: 0.50s;
+ 
+  
+}
+.box:hover{
+  cursor: pointer;
+  transform: scale(1.2);
+  z-index: 2;
+  background-color: #e0e0e0;
+  --zero: inset 0px 0px 0px #bbb,
+          inset 0px 0px 0px #fff,
+                0px 0px 0px #bbb,
+                0px 0px 0px #fff;
+}
+.box:active{
+  background-color: aqua;
+  transform: scale(10);
+  
+}
+
